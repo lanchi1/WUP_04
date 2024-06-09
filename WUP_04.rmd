@@ -38,10 +38,6 @@ $H_a$ There is a significant difference in average score on the WORDSUM test bet
 
 
 ```{r}
-boxplot(WORDSUM~DEGREE,data=mydata)
-```
-
-```{r}
 basicCN <- ggplot(mydata,aes(x=DEGREE,y=WORDSUM))
 ```
 ```{r}
@@ -51,12 +47,13 @@ basicCN + geom_boxplot()
 By looking at this data the graduate and junior college boxes were above high school as well as Lt high school. The graduate and bachelor boxed would bump into each other that they are close. Graduate school and Lt high school are different. Graduate and high school are different as well. 
 
 ### Numerical Descriptive Results
-
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
 ```{r}
 favstats(WORDSUM~DEGREE,data=mydata)
 ```
+
+When looking at the data, i see a huge difference in student in high school to junior college. High school students were a total of 85 whereas junior college had the least amount at 12. The students with a bachelor degree were the second highest at 44 where the students in LT hs were at 16. All of the students attending had either a lot or a little bit of students. A big disparity between the number of students. There is going to be some statistical difference between these groups, it is not completely clear to what is different statistically. To make it clear, we will have to run these statistical tests. There will be a two part test, first needing to run one way anova, to show us some statistical difference. To clarify this we would need to run the turkey HSD.
 
 ## Inferential Results
 
